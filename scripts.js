@@ -24,5 +24,16 @@ $( document ).ready(function() {
       $(this).parent().remove();
     });
 
+    // mark all as complete
+    $( '#mark-complete' ).on('click', function(){
+      console.log("holla");
+      $( '#main-list li' ).removeClass('complete').addClass('complete');
+    });
+
+    // remove all from list
+    $( '#remove-all' ).on('click', function(){
+      $( '#main-list li' ).remove();
+    });
+
 
 });

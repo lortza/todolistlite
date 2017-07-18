@@ -1,0 +1,84 @@
+/* Variables */
+$theme-color: lightblue;
+$item-height: 30px;
+$delete-icon: red;
+$font-color: black;
+$li-hover: $theme-color;
+
+/* Styles */
+
+html {
+  height: 100%;
+  background: beige;
+  background: radial-gradient(circle, #fff 10%, $theme-color);
+  background-size: cover;
+}
+
+body {
+  margin: 0 auto;
+  width: 300px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+input {
+  width: 289px;
+  height: $item-height;
+  margin: 0 0 10px 0;
+  padding: 5px;
+}
+
+ul {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+li {
+  // border: 1px solid gray;
+  list-style-type: none;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  min-height: $item-height;
+  font-size: 20px;
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(white, #f1f1f1); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, #f1f1f1); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, #f1f1f1); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, #f1f1f1); /* Standard syntax */
+  &:hover {
+    background: $li-hover; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(white, $li-hover); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, $li-hover); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, $li-hover); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, $li-hover); /* Standard syntax */
+  }
+
+}
+
+.material-icons {
+  float: right;
+}
+
+.complete {
+  text-decoration: line-through;
+  color: gray;
+  font-style: italic;
+  background: #f1f1f1;
+  .material-icons {
+    color: lighten($delete-icon, 30%);
+  }
+}
+
+.material-icons {
+  font-size: 0.75em;
+  cursor: pointer;
+  color: $delete-icon;
+}
+
+
+@media only screen and (max-width: 300px) {
+  body {
+    width: 100%;
+  }
+}

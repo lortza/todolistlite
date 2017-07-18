@@ -1,15 +1,13 @@
 $( document ).ready(function() {
-    console.log( "ready!" );
 
     var $inputField = $( 'input' ).attr('name', 'new-items');
     var $mainList = $( '#main-list' );
     var $listItems = $mainList.children();
 
-
-
+    // makeshift onEnter listener
     $inputField.on('keyup', function (e) {
       if (e.keyCode == 13) {
-        $mainList.append('<li>'+$(this).val()+' <i class="material-icons">highlight_off</i></li>');
+        $mainList.prepend('<li>'+$(this).val()+' <i class="material-icons">highlight_off</i></li>');
         $inputField.val('');
       }
     });

@@ -1,0 +1,15 @@
+li.complete {
+  text-decoration: line-through;
+  color: gray;
+  font-style: italic;
+}
+
+.material-icons {
+  font-size: 0.75em;
+  cursor: pointer;
+  color: red;
+}
+
+.complete .material-icons {
+  color: pink;
+}

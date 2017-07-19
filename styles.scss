@@ -4,6 +4,8 @@ $item-height: 30px;
 $delete-icon: red;
 $font-color: black;
 $li-hover: $theme-color;
+$lightgray: #f1f1f1;
+$border-color: #e1e1e1;
 
 /* Styles */
 
@@ -57,24 +59,35 @@ li {
 }
 
 .material-icons {
+  font-size: 1em;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.delete {
+  color: $delete-icon;
   float: right;
+}
+
+.check-boxes {
+  float: left;
+  margin-right: 5px;
 }
 
 .complete {
   text-decoration: line-through;
-  color: gray;
+  color: lighten(gray, 20%);
   font-style: italic;
-  background: #f1f1f1;
-  .material-icons {
+  background: $lightgray;
+  &:hover {
+    background: darken($lightgray, 5%);
+  }
+  .delete {
     color: lighten($delete-icon, 30%);
   }
 }
 
-.material-icons {
-  font-size: 0.75em;
-  cursor: pointer;
-  color: $delete-icon;
-}
+
 
 
 @media only screen and (max-width: 300px) {

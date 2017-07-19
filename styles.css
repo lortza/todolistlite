@@ -52,20 +52,27 @@ li {
     /* Standard syntax */ }
 
 .material-icons {
+  font-size: 1em;
+  line-height: 30px;
+  cursor: pointer; }
+
+.delete {
+  color: red;
   float: right; }
+
+.check-boxes {
+  float: left;
+  margin-right: 5px; }
 
 .complete {
   text-decoration: line-through;
-  color: gray;
+  color: #b3b3b3;
   font-style: italic;
   background: #f1f1f1; }
-  .complete .material-icons {
+  .complete:hover {
+    background: #e4e4e4; }
+  .complete .delete {
     color: #ff9999; }
-
-.material-icons {
-  font-size: 0.75em;
-  cursor: pointer;
-  color: red; }
 
 @media only screen and (max-width: 300px) {
   body {

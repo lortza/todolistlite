@@ -24,7 +24,7 @@ body {
 }
 
 input {
-  width: 289px;
+  width: 287px;
   height: $item-height;
   margin: 0 0 10px 0;
   padding: 5px;
@@ -36,28 +36,50 @@ ul {
   padding: 0;
 }
 
+@mixin clickables {
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  min-height: $item-height;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 li {
-  // border: 1px solid gray;
+  @include clickables;
+  padding: 5px 10px;
+  color: #888;
   list-style-type: none;
   margin-bottom: 5px;
-  padding: 5px 10px;
-  min-height: $item-height;
   font-size: 20px;
+  line-height: 30px;
+  border: 1px solid $border-color;
   background: white; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(white, #f1f1f1); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(white, #f1f1f1); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(white, #f1f1f1); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(white, #f1f1f1); /* Standard syntax */
   &:hover {
+    border: 1px solid $theme-color;
     background: $li-hover; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(white, $li-hover); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(white, $li-hover); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(white, $li-hover); /* For Firefox 3.6 to 15 */
     background: linear-gradient(white, $li-hover); /* Standard syntax */
   }
+}/* li */
 
-}
 
+.complete {
+  text-decoration: line-through;
+  color: lighten(gray, 20%);
+  font-style: italic;
+  background: $lightgray;
+  &:hover {
+    background: darken($lightgray, 5%);
+  }
+  .delete {
+    color: lighten($delete-icon, 30%);
+  }
+}/* complete */
+
+
+/* Icons */
 .material-icons {
   font-size: 1em;
   line-height: 30px;
@@ -74,20 +96,19 @@ li {
   margin-right: 5px;
 }
 
-.complete {
-  text-decoration: line-through;
-  color: lighten(gray, 20%);
-  font-style: italic;
-  background: $lightgray;
+button {
+  @include clickables;
+  display: inline;
+  text-align: center;
+  color: white;
+  background: darken($theme-color, 20%);
+  border: 1px solid darken($theme-color, 20%);
+  font-size: 12px;
+  padding: 0px 7px;
   &:hover {
-    background: darken($lightgray, 5%);
-  }
-  .delete {
-    color: lighten($delete-icon, 30%);
+    background: darken($theme-color, 30%);
   }
 }
-
-
 
 
 @media only screen and (max-width: 300px) {

@@ -13,7 +13,7 @@ body {
   font-family: Arial, sans-serif; }
 
 input {
-  width: 289px;
+  width: 287px;
   height: 30px;
   margin: 0 0 10px 0;
   padding: 5px; }
@@ -24,22 +24,22 @@ ul {
   padding: 0; }
 
 li {
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  min-height: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #888;
   list-style-type: none;
   margin-bottom: 5px;
-  padding: 5px 10px;
-  min-height: 30px;
   font-size: 20px;
+  line-height: 30px;
+  border: 1px solid #e1e1e1;
   background: white;
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(white, #f1f1f1);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(white, #f1f1f1);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(white, #f1f1f1);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(white, #f1f1f1);
-  /* Standard syntax */ }
+  /* For browsers that do not support gradients */ }
   li:hover {
+    border: 1px solid lightblue;
     background: lightblue;
     /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(white, lightblue);
@@ -51,6 +51,19 @@ li {
     background: linear-gradient(white, lightblue);
     /* Standard syntax */ }
 
+/* li */
+.complete {
+  text-decoration: line-through;
+  color: #b3b3b3;
+  font-style: italic;
+  background: #f1f1f1; }
+  .complete:hover {
+    background: #e4e4e4; }
+  .complete .delete {
+    color: #ff9999; }
+
+/* complete */
+/* Icons */
 .material-icons {
   font-size: 1em;
   line-height: 30px;
@@ -64,15 +77,21 @@ li {
   float: left;
   margin-right: 5px; }
 
-.complete {
-  text-decoration: line-through;
-  color: #b3b3b3;
-  font-style: italic;
-  background: #f1f1f1; }
-  .complete:hover {
-    background: #e4e4e4; }
-  .complete .delete {
-    color: #ff9999; }
+button {
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  min-height: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline;
+  text-align: center;
+  color: white;
+  background: #5fb3ce;
+  border: 1px solid #5fb3ce;
+  font-size: 12px;
+  padding: 0px 7px; }
+  button:hover {
+    background: #3a9fc0; }
 
 @media only screen and (max-width: 300px) {
   body {

@@ -36,7 +36,6 @@ $( document ).ready(function() {
 
     // add 'delete' icon functionality
     $( '#main-list' ).on("click", '.delete', function(){
-      confirm("Are you sure you want to delete this item?");
       $(this).parent().remove();
     });
 

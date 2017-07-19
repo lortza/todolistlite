@@ -1,4 +1,7 @@
-/* Variables */
+/* -----------------------------
+/*         Variables
+/* -----------------------------*/
+
 $theme-color: lightblue;
 $item-height: 30px;
 $delete-icon: red;
@@ -7,7 +10,10 @@ $li-hover: $theme-color;
 $lightgray: #f1f1f1;
 $border-color: #e1e1e1;
 
-/* Styles */
+
+/* -----------------------------
+/*         Main Styles
+/* -----------------------------*/
 
 html {
   height: 100%;
@@ -80,7 +86,10 @@ li {
 }/* complete */
 
 
-/* Icons */
+/* -----------------------------
+/*            Icons
+/* -----------------------------*/
+
 .material-icons {
   font-size: 1em;
   line-height: 30px;
@@ -97,6 +106,11 @@ li {
   float: left;
   margin-right: 5px;
 }
+
+
+/* -----------------------------
+/*           Buttons
+/* -----------------------------*/
 
 section.buttons {
   clear: both;
@@ -117,6 +131,10 @@ button {
   }
 }
 
+
+/* -----------------------------
+/*         Media Queries
+/* -----------------------------*/
 
 @media only screen and (max-width: 300px) {
   body {

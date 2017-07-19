@@ -1,5 +1,9 @@
-/* Variables */
-/* Styles */
+/* -----------------------------
+/*         Variables
+/* -----------------------------*/
+/* -----------------------------
+/*         Main Styles
+/* -----------------------------*/
 html {
   height: 100%;
   background: beige;
@@ -58,7 +62,9 @@ li {
     color: #ff9999; }
 
 /* complete */
-/* Icons */
+/* -----------------------------
+/*            Icons
+/* -----------------------------*/
 .material-icons {
   font-size: 1em;
   line-height: 30px;
@@ -73,6 +79,9 @@ li {
   float: left;
   margin-right: 5px; }
 
+/* -----------------------------
+/*           Buttons
+/* -----------------------------*/
 section.buttons {
   clear: both;
   margin-top: 20px; }
@@ -93,6 +102,9 @@ button {
   button:hover {
     background: #3a9fc0; }
 
+/* -----------------------------
+/*         Media Queries
+/* -----------------------------*/
 @media only screen and (max-width: 300px) {
   body {
     width: 100%; } }

@@ -36,20 +36,14 @@ li {
   font-size: 20px;
   line-height: 30px;
   border: 1px solid #e1e1e1;
-  background: white;
-  /* For browsers that do not support gradients */ }
+  background: white; }
   li:hover {
     border: 1px solid lightblue;
     background: lightblue;
-    /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(white, lightblue);
-    /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(white, lightblue);
-    /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(white, lightblue);
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(white, lightblue);
-    /* Standard syntax */ }
+    background: linear-gradient(white, lightblue); }
 
 /* li */
 .complete {
@@ -58,6 +52,7 @@ li {
   font-style: italic;
   background: #f1f1f1; }
   .complete:hover {
+    border: 1px solid #e1e1e1;
     background: #e4e4e4; }
   .complete .delete {
     color: #ff9999; }

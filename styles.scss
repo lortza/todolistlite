@@ -96,6 +96,10 @@ li {
   margin-right: 5px;
 }
 
+.buttons {
+  clear: both;
+}
+
 button {
   @include clickables;
   display: inline;

@@ -77,6 +77,9 @@ li {
   float: left;
   margin-right: 5px; }
 
+.buttons {
+  clear: both; }
+
 button {
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
   user-select: none;

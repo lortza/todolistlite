@@ -39,8 +39,14 @@ $( document ).ready(function() {
 
     // mark all as complete
     $( '#mark-complete' ).on('click', function(){
-      console.log("holla");
-      $( '#main-list li' ).removeClass('complete').addClass('complete');
+      $( '#main-list li' )
+        .removeClass('incomplete')
+        .addClass('complete');
+
+      $.each($('#main-list li'), function(index, element) {
+        var $element = $(element);
+        $element.children().last().html('check_box');
+      });
     });
 
     // remove all from list

@@ -54,7 +54,10 @@ $( document ).ready(function() {
 
     // remove all from list
     $( '#remove-all' ).on('click', function(){
-      $( '#main-list li' ).remove();
+      var response = confirm("Are you sure you want to delete ALL of these items? This action cannot be undone.");
+      if (response === true ){
+        $( '#main-list li' ).remove();
+      }
     });
 
 

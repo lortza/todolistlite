@@ -3,12 +3,15 @@ $( document ).ready(function() {
     var $inputField = $( 'input' ).attr('name', 'new-items');
     var $mainList = $( '#main-list' );
     var $listItems = $mainList.children();
-    var $listItemTemplate = $('<li class="incomplete"><i class="material-icons delete">highlight_off</i><i class="material-icons check-boxes">check_box_outline_blank</i></li>');
 
     // makeshift onEnter listener
     $inputField.on('keyup', function (e) {
       if (e.keyCode == 13) {
-        $mainList.prepend($listItemTemplate.append( $(this).val() ) );
+        $mainList.prepend(
+          '<li class="incomplete"><i class="material-icons delete">highlight_off</i><i class="material-icons check-boxes">check_box_outline_blank</i>'
+          + $(this).val()
+          + '</li>'
+        );
         $inputField.val('');
       }
     });

@@ -7,16 +7,44 @@ $( document ).ready(function() {
     // Makeshift onEnter listener
     var $inputField = $( 'input' ).attr('name', 'new-items');
 
+    // The preferred method, with objects and not string concatenation
     $inputField.on('keyup', function (e) {
+      var $trashIcon = $('<i></i>')
+          .addClass('material-icons')
+          .addClass('delete')
+          .text('highlight_off');
+
+      var $uncheckedBoxIcon = $('<i></i>')
+          .addClass('material-icons')
+          .addClass('check-boxes')
+          .text('check_box_outline_blank');
+
+      var $submittedListItem = $('<li></li>')
+          .text( $(this).val() ) // always accept user input as 'text' so that it can't run malicious scripts
+          .addClass('incomplete')
+          .append($trashIcon)
+          .append($uncheckedBoxIcon);
+
       if (e.keyCode == 13) {
-        $( '#main-list' ).prepend(
-          '<li class="incomplete"><i class="material-icons delete">highlight_off</i><i class="material-icons check-boxes">check_box_outline_blank</i>'
-          + $(this).val()
-          + '</li>'
-        );
+        $( '#main-list' ).prepend( $submittedListItem );
         $inputField.val('');
       }
     });
+
+    // --- THE NON-PREFERRED METHOD WITH STRING CONCATENTION-----
+    // var $inputField = $( 'input' ).attr('name', 'new-items');
+
+    // $inputField.on('keyup', function (e) {
+    //   if (e.keyCode == 13) {
+    //     $( '#main-list' ).prepend(
+    //       '<li class="incomplete"><i class="material-icons delete">highlight_off</i><i class="material-icons check-boxes">check_box_outline_blank</i>'
+    //       + $(this).val()
+    //       + '</li>'
+    //     );
+    //     $inputField.val('');
+    //   }
+    // });
+    //-------------------------------------------------------------
 
 
     //
